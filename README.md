@@ -3,6 +3,7 @@
     <h1>Deadline Killer</h1>
     <p><em>The missing deadline management tool for Android</em></p>
 </div>
+
 ## License
 
 Deadline Killer is licensed under the [MIT license](https://opensource.org/licenses/MIT).
