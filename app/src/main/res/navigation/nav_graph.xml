@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.deadlinekiller.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_fragment_to_view_deadline_fragment"
+            app:destination="@id/view_deadline_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_edit_deadline_fragment"
+            app:destination="@id/edit_deadline_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_edit_reminder_fragment"
+            app:destination="@id/edit_reminder_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_congratulation_fragment"
+            app:destination="@id/congratulation_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_view_reminder_fragment"
+            app:destination="@id/view_reminder_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_settings_fragment"
+            app:destination="@id/settings_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/view_deadline_fragment"
+        android:name="com.deadlinekiller.fragments.ViewDeadlineFragment"
+        android:label="fragment_view_deadline"
+        tools:layout="@layout/fragment_view_deadline" >
+        <action
+            android:id="@+id/action_view_deadline_fragment_to_edit_deadline_fragment"
+            app:destination="@id/edit_deadline_fragment" />
+        <action
+            android:id="@+id/action_view_deadline_fragment_to_edit_reminder_fragment"
+            app:destination="@id/edit_reminder_fragment" />
+        <action
+            android:id="@+id/action_view_deadline_fragment_to_congratulation_fragment"
+            app:destination="@id/congratulation_fragment" />
+        <action
+            android:id="@+id/action_view_deadline_fragment_to_view_reminder_fragment"
+            app:destination="@id/view_reminder_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_deadline_fragment"
+        android:name="com.deadlinekiller.fragments.EditDeadlineFragment"
+        android:label="fragment_edit_deadline"
+        tools:layout="@layout/fragment_edit_deadline" />
+    <fragment
+        android:id="@+id/edit_reminder_fragment"
+        android:name="com.deadlinekiller.fragments.EditReminderFragment"
+        android:label="fragment_edit_reminder"
+        tools:layout="@layout/fragment_edit_reminder" />
+    <fragment
+        android:id="@+id/congratulation_fragment"
+        android:name="com.deadlinekiller.fragments.CongratulationFragment"
+        android:label="fragment_congratulations"
+        tools:layout="@layout/fragment_congratulation" />
+    <fragment
+        android:id="@+id/view_reminder_fragment"
+        android:name="com.deadlinekiller.fragments.ViewReminderFragment"
+        android:label="ViewReminderFragment"
+        tools:layout="@layout/fragment_view_reminder">
+        <action
+            android:id="@+id/action_view_reminder_fragment_to_edit_reminder_fragment"
+            app:destination="@id/edit_reminder_fragment" />
+        <action
+            android:id="@+id/action_view_reminder_fragment_to_view_deadline_fragment"
+            app:destination="@id/view_deadline_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.deadlinekiller.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
