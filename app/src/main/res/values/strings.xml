@@ -70,7 +70,7 @@
     <string name="version_name">Version %1$s</string>
     <string name="view_deadline_page_title">View deadline</string>
     <string name="view_reminder_page_title">View reminder</string>
-    <string name="widget_warning">Add at least one deadline widget to the home screen to avoid reminder invocations to fail.</string>
+    <string name="widget_warning">Add at least one deadline widget to the home screen to ensure reminders go off as scheduled.</string>
     <plurals name="days">
         <item quantity="one">day</item>
         <item quantity="other">days</item>
