@@ -27,7 +27,6 @@ class DeadlineWidgetConfigureActivity : AppCompatActivity() {
             val adapter = SimpleDeadlineListAdapter(onClickDeadlineItem = { deadline ->
                 PreferenceManager.getDefaultSharedPreferences(this).edit().apply {
                     putInt(DeadlineWidget.KEY_DEADLINE_ID_OF_WIDGET + appWidgetId, deadline.id)
-                    putBoolean(DeadlineWidget.KEY_IS_WIDGET_ADDED, true)
                     apply()
                 }
                 DeadlineWidget.updateWidget(
