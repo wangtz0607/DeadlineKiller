@@ -21,19 +21,19 @@ class ReminderReceiver : BroadcastReceiver() {
     lateinit var reminderRepository: ReminderRepository
 
     override fun onReceive(context: Context, intent: Intent) {
-        val reminderDeadline =
+        val fullReminder =
             requireNotNull(intent.getParcelableExtra<FullReminder>(EXTRA_FULL_REMINDER))
-        when (reminderDeadline.type) {
+        when (fullReminder.type) {
             ReminderType.NOTIFICATION -> {
                 NotificationManagerCompat.from(context).notify(
-                    reminderDeadline.id,
-                    NotificationUtils.buildReminderNotification(context, reminderDeadline)
+                    fullReminder.id,
+                    NotificationUtils.buildReminderNotification(context, fullReminder)
                         .setAutoCancel(true)
                         .build(),
                 )
                 VibrationUtils.vibrateForNotification(VibrationUtils.getVibrator(context))
                 runBlocking(Dispatchers.IO) {
-                    reminderRepository.setInvokedById(reminderDeadline.id, true)
+                    reminderRepository.setInvokedById(fullReminder.id, true)
                 }
             }
             ReminderType.ALARM -> {
