@@ -55,13 +55,11 @@ class DeadlineWidget : AppWidgetProvider() {
             for (appWidgetId in appWidgetIds) {
                 remove(KEY_DEADLINE_ID_OF_WIDGET + appWidgetId)
             }
-            remove(KEY_IS_WIDGET_ADDED)
             apply()
         }
     }
 
     companion object {
-        const val KEY_IS_WIDGET_ADDED = "is_widget_added"
         const val KEY_DEADLINE_ID_OF_WIDGET = "deadline_id_of_widget_"
 
         fun updateWidget(

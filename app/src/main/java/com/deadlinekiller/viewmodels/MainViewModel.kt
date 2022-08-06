@@ -21,8 +21,6 @@ class MainViewModel @Inject constructor(
         reminderRepository.all.asLiveData()
     val upcomingReminders: LiveData<List<FullReminder>> =
         reminderRepository.upcoming.asLiveData()
-    val remindersAwaitingInvocation: LiveData<List<FullReminder>> =
-        reminderRepository.awaitingInvocation.asLiveData()
 
     fun getDeadlineById(id: Int): LiveData<Deadline> = deadlineRepository.getById(id).asLiveData()
 
