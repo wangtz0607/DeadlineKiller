@@ -3,14 +3,9 @@ package com.deadlinekiller.activities
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.activity.viewModels
-import androidx.preference.PreferenceManager
 import com.deadlinekiller.databinding.ActivityMainBinding
-import com.deadlinekiller.viewmodels.MainViewModel
-import com.deadlinekiller.widgets.DeadlineWidget
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
+import java.util.Locale
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
